@@ -6,12 +6,12 @@ import datetime as dt
 
 parser = ArgumentParser(prog="Youtube video downloader", description="Download Youtube videos")
 parser.add_argument("-c", "--channel", help="the channel url", required=True)
-parser.add_argument("-o", "--output", help="the output folder path", required=True)
+# parser.add_argument("-o", "--output", help="the output folder path", required=True)
 parser.add_argument("-d", "--days", help="number of days before today you can download videos", required=True)
 args = parser.parse_args()
 
 channel_url = parse.quote(args.channel)
-save_path = args.output
+save_path = "./downloads"
 days = int(args.days)
 
 def download_video(url):
