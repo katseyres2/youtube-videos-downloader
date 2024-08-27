@@ -1,0 +1,7 @@
+services:
+  python-dev:
+    build: .
+    volumes:
+      - ./downloads:/downloads
+      - ./scripts:/scripts
+    command: python script.py -c "https://www.youtube.com/c/HugoD%C3%A9crypte" -d 5
